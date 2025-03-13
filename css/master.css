@@ -1,0 +1,102 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("../images/weather_background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100vh;   
+}
+
+
+
+.heading {
+    margin: 50px;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    color: yellow;
+}
+body>p{
+    margin-bottom: 50px;
+    color: black;
+}
+
+/* Dropdown Styles */
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background: white;
+    margin: 30px;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Weather Results Section */
+.resultheading {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Weather Forecast Cards */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.weather-card {
+    border-radius: 15px;
+    padding: 15px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Weather Icon */
+.weather-card img {
+    margin-top: 10px;
+}
+
+/* Temperature Details */
+.details h3 {
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+}
+
+.details p {
+    font-size: 1.1rem;
+    margin: 3px 0;
+}
+
+/* Footer */
+footer {
+    margin: 50px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="css/master.css">
+
+<title>API Project</title>
+</head>
+
+<body>
+
+   <h1 class="heading">BlissWeather 🌤️</h1>
+   <p><b><i>BLISS - Best Live Intelligent Sky Scanner</i></b></p>
+
+   <h2>European Weather Forecast</h2>
+
+   <div class="section-description">
+        <p class="section-heading">
+            <form id="query-form">
+                <select name="city" id="city">
+                    <option disabled selected > -- Select a city --</option>
+                    <option value='{"lat":"52.367","long":"4.904"}'>Amsterdam, Netherlands</option>
+                    <option value='{"lat":"39.933","long":"32.859"}'>Ankara,Turkey</option>
+                    <option value='{"lat":"56.134","long":"12.945"}'>Astorp, Sweden</option>
+                    <option value='{"lat":"37.983","lon":"23.727"}'>Athens, Greece</option>
+                    <option value='{"lat":"54.597","lon":"-5.930"}'>Belfast, Northern Ireland</option>
+                    <option value='{"lat":"41.387","lon":"2.168"}'>Barcelona, Spain</option>
+                    <option value='{"lat":"52.520","lon":"13.405"}'>Berlin, Germany</option>
+                    <option value='{"lat":"46.948","lon":"7.447"}'>Bern, Switzerland</option>
+                    <option value='{"lat":"43.263","lon":"-2.935"}'>Bilbao, Spain</option>
+                    <option value='{"lat":"50.847","lon":"4.357"}'>Brussels, Belgium</option>
+                    <option value='{"lat":"47.497","lon":"19.040"}'>Bucharest, Romania</option>
+                    <option value='{"lat":"59.329","lon":"18.068"}'>Budapest, Hungary</option>
+                    <option value='{"lat":"51.483","lon":"-3.168"}'>Cardiff, Wales</option>
+                    <option value='{"lat":"50.937","lon":"6.96"}'>Cologne, Germany</option>
+                    <option value='{"lat":"55.676","lon":"12.568"}'>Copenhagen, Denmark</option>
+                    <option value='{"lat":"51.898","lon":"-8.475"}'>Cork, Ireland</option>
+                    <option value='{"lat":"53.349","lon":"-6.260"}'>Dublin, Ireland</option>
+                    <option value='{"lat":"55.953","lon":"-3.188"}'>Edinburgh, Scotland</option>
+                    <option value='{"lat":"43.7696","lon":"11.255"}'>Florence, Italy</option>
+                    <option value='{"lat":"50.110","lon":"8.682"}'>Frankfurt, Germany</option>        
+                    <option value='{"lat":"43.254","lon":"6.637"}'>French Riviera, France</option>
+                    <option value='{"lat":"32.650","lon":"-16.908"}'>Funchal, Portugual</option>
+                    <option value='{"lat":"36.140","lon":"-5.353"}'>Gibraltar</option>   
+                    <option value='{"lat":"57.708","lon":"11.974"}'>Gothenburg, Sweden</option>     
+                    <option value='{"lat":"53.548","lon":"9.987"}'>Hamburg, Germany</option>
+                    <option value='{"lat":"60.169","lon":"24.938"}'>Helsinki, Finland</option>
+                    <option value='{"lat":"39.020","lon":"1.482"}'>Ibiza, Spain</option>
+                    <option value='{"lat":"50.450","lon":"30.523"}'>Kyiv, Ukraine</option>
+                    <option value='{"lat":"61.115","lon":"10.466"}'>Lillehammer, Norway</option>
+                    <option value='{"lat":"38.722","lon":"-9.139"}'>Lisbon, Portugual</option>
+                    <option value='{"lat":"51.507","lon":"-0.127"}'>London, England, UK</option>        
+                    <option value='{"lat":"40.416","lon":"-3.703"}'>Madrid, Spain</option>
+                    <option value='{"lat":"39.695","lon":"3.017"}'>Mallorca, Spain</option>
+                    <option value='{"lat":"53.480","lon":"-2.242"}'>Manchester, England</option>        
+                    <option value='{"lat":"43.296","lon":"5.369"}'>Marseille, France</option>
+                    <option value='{"lat":"27.760","lon":"-15.586"}'>Maspalomas, Spain</option>
+                    <option value='{"lat":"45.464","lon":"9.190"}'>Milan, Italy</option>
+                    <option value='{"lat":"48.135","lon":"11.582"}'>Munich, Germany</option>
+                    <option value='{"lat":"40.851","lon":"14.268"}'>Naples, Italy</option>
+                    <option value='{"lat":"43.034","lon":"-2.417"}'>Oñati, Spain</option>
+                    <option value='{"lat":"59.913","lon":"10.752"}'>Oslo, Norway</option>
+                    <option value='{"lat":"48.856","lon":"2.352"}'>Paris, France</option>
+                    <option value='{"lat":"50.075","lon":"14.437"}'>Prague, Czech Republic</option>
+                    <option value='{"lat":"64.146","lon":"-21.942"}'>Reykjavík, Iceland</option>
+                    <option value='{"lat":"56.879","lon":"24.603"}'>Riga, Latvia</option>
+                    <option value='{"lat":"41.902","lon":"12.496"}'>Rome, Italy</option>
+                    <option value='{"lat":"39.453","lon":"-31.127"}'>Santa Cruz das Flores, Portugual</option>
+                    <option value='{"lat":"28.463","lon":"-16.251"}'>Santa Cruz de Tenerife, Spain</option>
+                    <option value='{"lat":"57.273","lon":"-6.215"}'>Skye, Scotland</option>
+                    <option value='{"lat":"42.697","lon":"23.321"}'>Sofia, Bulgaria</option>
+                    <option value='{"lat":"59.329","lon":"18.068"}'>Stockholm, Sweden</option>
+                    <option value='{"lat":"59.437","lon":"24.753"}'>Tallinn, Estonia</option>
+                    <option value='{"lat":"18.208","lon":"16.373"}'>Vienna, Austria</option>
+                    <option value='{"lat":"52.229","lon":"21.012"}'>Warsaw, Poland</option>
+                    <option value='{"lat":"53.961","lon":"-1.07"}'>York, England, UK</option>
+                    <option value='{"lat":"47.376","lon":"8.541"}'>Zurich, Switzerland</option> 
+                </select>
+            </form>
+        </p>
+   </div>
+
+   
+    <div class="results" id="results"></div>
+
+</body>
+
+<footer>
+    <img src="images/cloudline.png" alt="">
+    <p class="copyright-text">© Copyright 2025 Balqees </p>
+</footer>
+
+<!-- Our codes -->
+<script src="js/main.js"></script>
