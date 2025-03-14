@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const month = parseInt(day.date.toString().substring(4, 6)) - 1;
             const aday = parseInt(day.date.toString().substring(6, 8))
             const date = new Date(year, month, aday).toDateString();
-
+            
             const weatherCard = `
-
+            
                 <div class="weather-card">
-                    <p><strong>${date}</strong></p>
+                    <p class="date"><strong>${date}</strong></p>
                     <div class="icons">
                         <img src=${weatherIcons[day.weather]} alt="weatherType">
                     </div>
@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         <p> H: ${day.temp2m.max}°C</p>    
                     </div>   
                 </div>
-            `
+            `;
+            
 
             resultsContainer.innerHTML += weatherCard;
         })
