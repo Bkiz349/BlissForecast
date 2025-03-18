@@ -120,7 +120,7 @@ footer {
         font-size: 1.7rem;
    }
    select{
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0;
    }
    option{
@@ -129,13 +129,14 @@ footer {
 
    .results {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust min width */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
         gap: 5px;
         padding: 10px;
     }
 
     .weather-card {
         border-radius: 15px;
+        background: rgba(255, 255, 255, 0.15);
         padding: 15px;
         width: 100%;
         max-width: 350px; 
